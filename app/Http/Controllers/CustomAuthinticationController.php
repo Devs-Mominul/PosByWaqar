@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 class CustomAuthinticationController extends Controller
 {
     public function user(){
-        return view('authentication.userRegister');
+        return view('authentication.user_login');
     }
     public function user_post(Request $request){
         $request->validate([

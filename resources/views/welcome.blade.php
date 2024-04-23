@@ -1,5 +1,5 @@
-@include('auth.login')
-{{--
+
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -48,8 +48,9 @@
 
     <body>
         <!-- Static navbar -->
+        <br>
 <nav class="navbar navbar-default navbar-static-top">
-  <div class="container">
+  <div class="container justify-between d-flex align-items-center">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -63,11 +64,11 @@
       <ul class="nav navbar-nav">
                                       </ul>
       <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="{{ route('custom.auth.user') }}">User</a></li>
-                                    <li><a href="{{ route('custom.auth.admin') }}">Admin</a></li>
-                                    <li><a href="{{ route('custom.auth.depo') }}">Depo</a></li>
-                                    <li><a href="{{ route('custom.auth.stockiest') }}">Stockiest</a></li>
-                                          </ul>
+                                    <li style="margin-right: 10px"><a href="{{ route('custom.auth.user') }}" class=" btn btn-sm btn-primary" >User Login</a></li>
+                                    <li style="margin-right: 10px"><a href="{{ route('custom.auth.admin') }}" class="btn btn-primary">Admin Login</a></li>
+                                    <li style="margin-right: 10px"><a href="{{ route('custom.auth.depo') }}" class="btn btn-primary">Depo Login</a></li>
+                                    <li ><a href="{{ route('custom.auth.stockiest') }}" class="btn btn-primary">Stockiest Login</a></li>
+    </ul>
     </div><!-- nav-collapse -->
   </div>
 </nav>        <div class="container">
@@ -185,4 +186,4 @@
     <!-- Scripts -->
     <script src="https://pos.iammonirul.xyz/js/login.js?v=48"></script>
         </body>
-</html>  --}}
+</html>

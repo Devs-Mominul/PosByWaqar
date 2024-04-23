@@ -40,6 +40,19 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'customUser' => [
+            'driver' => 'session',
+            'provider' => 'custom_users',
+        ],
+        'depo' => [
+            'driver' => 'session',
+            'provider' => 'depos',
+        ],
+        'stockiest' => [
+            'driver' => 'session',
+            'provider' => 'stockiests',
+        ],
+
     ],
 
     /*
@@ -63,6 +76,18 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+        'custom_users' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\CustomUser::class),
+        ],
+        'depos' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Depo::class),
+        ],
+        'stockiests' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Stockiest::class),
         ],
 
         // 'users' => [

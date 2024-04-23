@@ -58,10 +58,9 @@
         </a>
       </li>  --}}
       <li class="">
-        <form method="POST" action="{{ route('logout') }}">
-            @csrf
-        <a href="route('logout')" class="btn btn-primary"  onclick="event.preventDefault();
-        this.closest('form').submit();">
+
+        <a href="{{ route('customer.logout') }}" class="btn btn-primary"
+      ">
 
           Logout
         </a>
@@ -85,7 +84,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="pb-3 mt-3 mb-3 user-panel d-flex">
         <div class="image">
-            @if(Auth::user()->photo==null)
+            {{--  @if(Auth::user()->photo==null)
             <img src="{{ Avatar::create('Auth::user()->name')->toBase64() }}"  width="20px" />
 
 
@@ -93,11 +92,11 @@
             <img src="{{ asset('upload/profile/') }}/{{ Auth::user()->photo }}"   width="20px" height="20px"  style="border-radius:50% !important;height:40px !important;width:40px !important;" alt="User Image"/>
 
 
-            @endif
+            @endif  --}}
 
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+          {{--  <a href="#" class="d-block">{{ Auth::user()->name }}</a>  --}}
         </div>
       </div>
 
@@ -168,7 +167,7 @@
                 </a>
               </li>  --}}
               <li class="nav-item">
-                <a href="{{ route('depo.list') }}" class="nav-link">
+                <a href="{{ route('depo.depo.list.user') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Depo List</p>
                 </a>
@@ -180,14 +179,14 @@
                 </a>
               </li>  --}}
                <li class="nav-item">
-                <a href="{{ route('stockist.list') }}" class="nav-link">
+                <a href="{{ route('stockiest.user.list') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Stockist List</p>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a href="{{ route('user.list') }}" class="nav-link">
+                <a href="{{ route('customer.user.list') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Customer List</p>
                 </a>

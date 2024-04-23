@@ -50,7 +50,7 @@
                     <td>{{ $stockist->stockiest_arya }}</td>
                     <td>{{ $stockist->stockiest_user_id }}</td>
                     <td>
-                        <div class="d-flex  justify-content-between" >
+                        <div class="d-flex justify-content-between" >
                             <a href="#" class="shadow btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>&NonBreakingSpace;  <a href="#" class="shadow btn btn-primary btn-xs sharp"><i class="fa fa-edit"></i></a> &NonBreakingSpace; <a href="#" class="shadow btn btn-success btn-xs sharp"><i class="fa fa-eye"></i></a>
                         </div>
                     </td>

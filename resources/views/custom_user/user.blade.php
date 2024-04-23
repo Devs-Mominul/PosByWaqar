@@ -53,7 +53,7 @@
   <div class="card">
     <div class="card-header"><h4>USER REGISTRATION </h4></div>
     <div class="card-body">
-        <form action="{{ route('user.post') }}" method="post">
+        <form action="{{ route('user.user.list.user') }}" method="post">
             @csrf
             <div class="container">
                 <div class="row">
@@ -88,7 +88,7 @@
                             <label for="name" class="form-label">Stockiest Id:</label>
                             <select name="stockiest_id" id="stockiest_id" class="form-control" >
                                 @foreach (App\Models\Stockiest::all() as $stockiest)
-                                <option value="{{ $stockiest->id }}">{{ $stockiest->stockiest_user_id }}</option>
+                                <option value="{{ $stockiest->stockiest_user_id }}">{{ $stockiest->stockiest_user_id }}</option>
 
                                 @endforeach
 
@@ -102,7 +102,7 @@
                             <label for="name" class="form-label"> User Ref ID:</label>
                             <select name="user_ref_id" id="user_ref_id"  class="form-control " >
                                 @foreach (App\Models\CustomUser::all() as $custom)
-                                <option  value="{{ $custom->id }}">{{ $custom->user_id }}</option>
+                                <option  value="{{ $custom->user_id }}">{{ $custom->user_id }}</option>
 
                                 @endforeach
 
@@ -115,7 +115,7 @@
                             <label for="name" class="form-label"> Placement User ID:</label>
                             <select name="place_user_id" id="place_user_id"  class="form-control " >
                                 @foreach (App\Models\CustomUser::all() as $custom)
-                                <option  value="{{ $custom->id }}">{{ $custom->user_id }}</option>
+                                <option  value="{{ $custom->user_id }}">{{ $custom->user_id }}</option>
 
                                 @endforeach
 
